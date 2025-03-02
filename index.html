@@ -1,108 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="second.css">
-    <title>Document</title>
-</head>
-<body class="flickering">
-<audio src="finalcroppedaudio.mp3" id="audio" controls style="display: none;">
-    <img src="train.jpg" alt="">
-</audio>
-    <div class="background"></div>
-<div class="content">
-    <!-- <button>START NOW</button> -->
-</div>
-</body>
-<body>
-<div id="popupModal" class="popup">
-<button id="popupButton" onclick="play()" class="popup-button">Dare to proceed? Click me</button>
-</div>
-<h1 class="heading">The <br>
-Last <br>
-Passenger</h1>
-        
-<p class="p1"><b>The station stood in eerie silence, its dim lights flickering like fading stars.
-<br><br>
 
-    David gripped the crumpled ticket, the clerk’s warning still echoing in his mind.
-    <br><br>
-    The train emerged from the fog, its doors sliding open with a hollow whisper.
-    <br><br>
-    He stepped inside—and the world he knew vanished.
-    <br><br>
-    This wasn’t a journey. It was a descent into the unknown.</b></p>
-    <br><br><br>
-    <p class="p2"><b>TO START CLICK ANYWHERE</b></p>
-    <script>
-        function goToStoryPage() {
-            window.location.href = "story.html"; // Redirect to the story page
-        }
-        function play(){
-            document.getElementById("audio").play();
-        }
-    </script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="second.css">
+  <title>Document</title>
+</head>
+
+<body class="flickering">
+  <audio src="finalcroppedaudio.mp3" id="audio" controls style="display: none;">
+    <img src="train.jpg" alt="">
+  </audio>
+  <div class="background"></div>
+  <div class="content">
+    <!-- <button>START NOW</button> -->
+  </div>
 </body>
+
+<body>
+  <div id="popupModal" class="popup">
+    <button id="popupButton" onclick="play()" class="popup-button">Dare to proceed? Click me</button>
+  </div>
+  <h1 class="heading">The <br>
+    Last <br>
+    Passenger</h1>
+
+  <p class="p1"><b>The station stood in eerie silence, its dim lights flickering like fading stars.
+      <br><br>
+      David gripped the crumpled ticket, the clerk’s warning still echoing in his mind.
+      <br><br>
+      The train emerged from the fog, its doors sliding open with a hollow whisper.
+      <br><br>
+      He stepped inside—and the world he knew vanished.
+      <br><br>
+      This wasn’t a journey. It was a descent into the unknown.</b></p>
+  <br><br><br>
+  <p class="p2"><b><a href="story.html">TO START CLICK ANYWHERE</a></b></p>
+  <script>
+    function goToStoryPage() {
+      window.location.href = "story.html"; // Redirect to the story page
+    }
+    function play() {
+      document.getElementById("audio").play();
+    }
+  </script>
+</body>
+
 </html>
 <style>
-    .popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease, visibility 0s 0.3s;
-}
+  .p2 a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+  }
 
-/* Style the popup button */
-.popup-button {
-  background-color: #fff;
-  padding: 20px 30px;
-  font-size: 18px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s;
-  font-family: 'Creepster', cursive;
-}
+  /* Style the popup button */
+  .popup-button {
+    background-color: #fff;
+    padding: 20px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    font-family: 'Creepster', cursive;
+  }
 
-.popup-button:hover {
-  background-color: #f1f1f1;
-  transition: all 0.3s ease;
-}
+  .popup-button:hover {
+    background-color: #f1f1f1;
+    transition: all 0.3s ease;
+  }
 
-/* Show the popup when triggered */
-.popup.show {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
+  /* Show the popup when triggered */
+  .popup.show {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
 </style>
 <script>
-    window.addEventListener('load', function() {
+  window.addEventListener('load', function () {
+    const popupModal = document.getElementById('popupModal');
+    popupModal.classList.add('show');
+  });
+
+  // When the popup button is clicked, close the modal and play audio
+  const popupButton = document.getElementById('popupButton');
+  const audioPlayer = document.getElementById('audio');
   const popupModal = document.getElementById('popupModal');
-  popupModal.classList.add('show');
-});
 
-// When the popup button is clicked, close the modal and play audio
-const popupButton = document.getElementById('popupButton');
-const audioPlayer = document.getElementById('audio');
-const popupModal = document.getElementById('popupModal');
-
-popupButton.addEventListener('click', function() {
-  popupModal.classList.remove('show');  // Hide the popup
-  audioPlayer.play();  // Start playing the audio
-});
+  popupButton.addEventListener('click', function () {
+    popupModal.classList.remove('show');  // Hide the popup
+    audioPlayer.play();  // Start playing the audio
+  });
 </script>
